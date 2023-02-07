@@ -15,29 +15,29 @@ function M.config()
       local gitsigns = package.loaded.gitsigns
       local line = vim.fn.line
       -- Stage
-      u.map("n", "<Leader>hs", gitsigns.stage_hunk)
-      u.map("v", "<Leader>hs", function()
+      u.map("n", "<leader>hs", gitsigns.stage_hunk)
+      u.map("v", "<leader>hs", function()
         gitsigns.stage_hunk { line ".", line "v" }
       end)
       u.map("n", "<leader>hS", gitsigns.stage_buffer)
       -- Reset
-      u.map("n", "<Leader>hr", gitsigns.reset_hunk)
-      u.map("v", "<Leader>hr", function()
+      u.map("n", "<leader>hr", gitsigns.reset_hunk)
+      u.map("v", "<leader>hr", function()
         gitsigns.reset_hunk { line ".", line "v" }
       end)
-      u.map("n", "<Leader>hR", gitsigns.reset_buffer)
+      u.map("n", "<leader>hR", gitsigns.reset_buffer)
       -- Navigate
-      u.map("n", "<Leader>hp", gitsigns.prev_hunk)
-      u.map("n", "<Leader>hn", gitsigns.next_hunk)
+      u.map("n", "<leader>hp", gitsigns.prev_hunk)
+      u.map("n", "<leader>hn", gitsigns.next_hunk)
       -- Diff
-      u.map("n", "<Leader>hd", gitsigns.diffthis)
-      u.map("n", "<Leader>hD", function()
+      u.map("n", "<leader>hd", gitsigns.diffthis)
+      u.map("n", "<leader>hD", function()
         gitsigns.diffthis "~"
       end)
       -- Misc
-      u.map("n", "<Leader>hu", gitsigns.undo_stage_hunk)
-      u.map("n", "<Leader>hv", gitsigns.preview_hunk)
-      u.map("n", "<Leader>hb", function()
+      u.map("n", "<leader>hu", gitsigns.undo_stage_hunk)
+      u.map("n", "<leader>hv", gitsigns.preview_hunk)
+      u.map("n", "<leader>hb", function()
         gitsigns.blame_line { full = true }
       end)
     end,

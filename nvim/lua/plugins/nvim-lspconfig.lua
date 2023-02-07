@@ -1,5 +1,6 @@
 local M = {
   "neovim/nvim-lspconfig",
+  --"simrat39/rust-tools.nvim",
 }
 
 function M.config()
