@@ -42,9 +42,8 @@ function M.config()
       cmd = {
         "clangd",
         "--background-index",
-        "--suggest-missing-includes",
         "--clang-tidy",
-        "--header-insertion=iwyu",
+        "--completion-style=detailed",
       },
       --on_attach = function()
       --end,
