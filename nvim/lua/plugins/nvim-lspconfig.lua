@@ -1,21 +1,8 @@
 local M = {
   "neovim/nvim-lspconfig",
-  --"simrat39/rust-tools.nvim",
 }
 
 function M.config()
-  --require("rust-tools").setup {
-  --  server = {
-  --    settings = {
-  --      ["rust-analyzer"] = {
-  --        diagnostics = {
-  --          --disabled = {"inactive-code"}
-  --        },
-  --      },
-  --    },
-  --  },
-  --}
-
   --configs.unigine_shaders = {
   --  default_config = {
   --    --cmd = {'/home/despair/test/c++/test'};
@@ -44,6 +31,7 @@ function M.config()
         "--background-index",
         "--clang-tidy",
         "--completion-style=detailed",
+        "--header-insertion=never",
       },
       --on_attach = function()
       --end,
