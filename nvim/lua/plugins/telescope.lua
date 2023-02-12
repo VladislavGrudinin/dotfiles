@@ -16,6 +16,7 @@ function M.config()
   local preview_picker_horizontal = {
     layout_strategy = "horizontal",
     fname_width = 60,
+    symbol_width = 60,
     layout_config = {
       width = 0.99,
       height = 0.99,
@@ -27,6 +28,7 @@ function M.config()
   local preview_picker_vertical = {
     layout_strategy = "vertical",
     fname_width = 60,
+    symbol_width = 60,
     layout_config = {
       width = 0.9,
       height = 0.95,
