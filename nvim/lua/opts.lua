@@ -1,8 +1,9 @@
 local g = vim.g
 g.mapleader = " "
-g.load_ruby_provider = false
-g.load_perl_provider = false
-g.load_node_provider = false
+g.loaded_python3_provider = 0
+g.loaded_ruby_provider = 0
+g.loaded_perl_provider = 0
+g.loaded_node_provider = 0
 
 local o = vim.opt
 o.exrc = true
