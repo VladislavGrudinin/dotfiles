@@ -37,6 +37,8 @@ M.on_attach = function(client)
     au CursorHoldI  <buffer> lua vim.lsp.buf.document_highlight()
     au CursorMoved  <buffer> lua vim.lsp.buf.clear_references()
     au CursorMovedI <buffer> lua vim.lsp.buf.clear_references()
+
+    au CursorHold   <buffer> lua vim.diagnostic.open_float(nil, { focusable = false })
   ]]
   end
 end

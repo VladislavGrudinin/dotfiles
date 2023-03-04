@@ -29,7 +29,7 @@ o.langmap =
   "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
 o.list = true
 o.listchars = { tab = "▸ ", space = "·", eol = "↲", extends = "❯", precedes = "❮", trail = "~", nbsp = "⦸" }
-o.updatetime = 500
+o.updatetime = 200
 o.helpheight = 99999
 o.mouse = ""
 
