@@ -95,8 +95,8 @@ function M.config()
   u.map("n", "<Leader>gd", telescope.lsp_definitions)
   u.map("n", "<Leader>gi", telescope.lsp_implementations)
   -- Question
-  u.map("n", "<Leader>qk", telescope.keymaps)
-  u.map("n", "<Leader>qh", telescope.help_tags)
+  u.map("n", "<Leader>ik", telescope.keymaps)
+  u.map("n", "<Leader>ih", telescope.help_tags)
 end
 
 return M

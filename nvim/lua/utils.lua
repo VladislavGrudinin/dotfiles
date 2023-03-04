@@ -30,4 +30,15 @@ M.git_email = function()
   return #result > 0 and result or def_value
 end
 
+M.on_attach = function(client)
+  if client.server_capabilities.documentHighlightProvider then
+    vim.cmd [[
+    au CursorHold   <buffer> lua vim.lsp.buf.document_highlight()
+    au CursorHoldI  <buffer> lua vim.lsp.buf.document_highlight()
+    au CursorMoved  <buffer> lua vim.lsp.buf.clear_references()
+    au CursorMovedI <buffer> lua vim.lsp.buf.clear_references()
+  ]]
+  end
+end
+
 return M

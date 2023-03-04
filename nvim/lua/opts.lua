@@ -47,9 +47,3 @@ vim.diagnostic.config {
 }
 
 vim.cmd [[ filetype plugin indent on ]]
-vim.cmd [[
-  "au CursorHold   * lua vim.lsp.buf.document_highlight()
-  "au CursorHoldI  * lua vim.lsp.buf.document_highlight()
-  "au CursorMoved  * lua vim.lsp.buf.clear_references()
-  "au CursorMovedI * lua vim.lsp.buf.clear_references()
-]]

@@ -10,6 +10,7 @@ local M = {
           },
         },
       },
+      on_attach = require("utils").on_attach,
     },
   },
 }
