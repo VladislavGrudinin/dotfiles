@@ -17,7 +17,7 @@ o.encoding = "utf-8"
 -- fucking slow
 --o.foldmethod = 'syntax'
 --o.foldlevel = 3
-o.showtabline = 2
+o.showtabline = 0
 o.shortmess = "aoOtTcF"
 o.splitbelow = true
 o.pumheight = 20
