@@ -2,7 +2,7 @@ local M = {
   "neovim/nvim-lspconfig",
 }
 
-function M.config()
+function add_custom_servers()
   local configs = require "lspconfig.configs"
   configs.unigine_shaders = {
     default_config = {
@@ -13,11 +13,14 @@ function M.config()
       end,
     },
   }
-  configs.unigine_shaders.setup {}
+end
+
+function M.config()
+  add_custom_servers()
 
   local lsp = require "lspconfig"
   local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
-  local servers = { "clangd", "bashls", "cmake" }
+  local servers = { "clangd", "bashls", "cmake", "unigine_shaders" }
   local default_config = {
     capabilities = capabilities,
     on_attach = require("utils").on_attach,
