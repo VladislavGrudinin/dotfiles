@@ -70,6 +70,13 @@ function M.config()
     local config = config_or_default(server)
     lsp[server].setup(config)
   end
+
+  vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(args)
+      local bufnr = args.buf
+      vim.lsp.buf.inlay_hint(args.buf, true)
+    end,
+  })
 end
 
 return M
