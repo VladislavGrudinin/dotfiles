@@ -6,7 +6,7 @@ u.map("n", "<C-k>", ":bnext<CR>")
 u.map("n", "<C-c>", ":noh<CR>")
 u.map("n", "<Leader>q", ":bp <BAR> bd #<CR>")
 
-u.map("n", "<F7>", ":%d <bar> 0r /home/despair/test/olymp/template.cc<CR> /solve<CR> <C-c> o")
+u.map("n", "<F7>", ":%d <bar> 0r /home/despair/test/olymp/template.cc<CR> :LspRestart<CR> /solve<CR> <C-c> o")
 
 u.map("n", "<Leader>di", ":lua vim.lsp.buf.code_action()<CR>")
 u.map("n", "<Leader>dr", ":lua vim.lsp.buf.rename()<CR>")
