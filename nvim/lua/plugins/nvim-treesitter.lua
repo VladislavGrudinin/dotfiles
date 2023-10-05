@@ -12,6 +12,7 @@ return {
         "lua",
         "python",
         "cmake",
+        "markdown",
       },
       highlight = {
         enable = true,
