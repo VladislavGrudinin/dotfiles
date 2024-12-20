@@ -76,7 +76,7 @@ function M.config()
       local bufnr = args.buf
       local client = vim.lsp.get_client_by_id(args.data.client_id)
       if client.server_capabilities.inlayHintProvider then
-        vim.lsp.inlay_hint(bufnr, true)
+        vim.lsp.inlay_hint.enable(true)
       end
     end,
   })
