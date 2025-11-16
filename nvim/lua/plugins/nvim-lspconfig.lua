@@ -1,5 +1,6 @@
 local M = {
   "neovim/nvim-lspconfig",
+  dependencies = { 'saghen/blink.cmp' },
 }
 
 function add_custom_servers()
@@ -16,13 +17,13 @@ function add_custom_servers()
 end
 
 function M.config()
-  add_custom_servers()
+  --add_custom_servers()
 
   local lsp = require "lspconfig"
-  local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
-  local servers = { "clangd", "bashls", "cmake", "unigine_shaders", "gopls" }
+  --local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+  local servers = { "clangd", "bashls", "cmake" }
   local default_config = {
-    capabilities = capabilities,
+    --capabilities = capabilities,
     on_attach = require("utils").on_attach,
   }
 
@@ -34,26 +35,6 @@ function M.config()
         "--clang-tidy",
         "--completion-style=detailed",
         "--header-insertion=never",
-      },
-    },
-    gopls = {
-      settings = {
-        gopls = {
-          semanticTokens = true,
-          analyses = {
-            unusedparams = true,
-          },
-          staticcheck = true,
-          hints = {
-            assignVariableTypes = true,
-            compositeLiteralFields = true,
-            compositeLiteralTypes = true,
-            constantValues = true,
-            functionTypeParameters = true,
-            parameterNames = true,
-            rangeVariableTypes = true,
-          },
-        },
       },
     },
   }
