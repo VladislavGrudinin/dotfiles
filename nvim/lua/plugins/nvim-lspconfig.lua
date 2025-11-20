@@ -19,7 +19,7 @@ end
 function M.config()
   --add_custom_servers()
 
-  local lsp = require "lspconfig"
+  --local lsp = require "lspconfig"
   --local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
   local servers = { "clangd", "bashls", "cmake" }
   local default_config = {
@@ -49,7 +49,9 @@ function M.config()
 
   for _, server in ipairs(servers) do
     local config = config_or_default(server)
-    lsp[server].setup(config)
+    vim.lsp.config(server, config)
+    vim.lsp.enable(server)
+    --lsp[server].setup(config)
   end
 
   vim.api.nvim_create_autocmd("LspAttach", {
