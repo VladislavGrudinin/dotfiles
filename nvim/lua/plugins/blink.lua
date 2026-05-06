@@ -1,6 +1,7 @@
 local M = {
   "saghen/blink.cmp",
-  build = "cargo build --release",
+  build = function() require("blink.cmp").build():wait(60000) end,
+  dependencies = { "saghen/blink.lib" },
   opts_extend = { "sources.default" },
   opts = {
     keymap = { preset = "enter" },

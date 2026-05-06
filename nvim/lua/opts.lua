@@ -33,6 +33,10 @@ o.listchars = { tab = "▸ ", space = "·", eol = "↲", extends = "❯", preced
 o.updatetime = 200
 o.helpheight = 99999
 o.mouse = ""
+o.colorcolumn = "99"
+o.expandtab = true
+o.tabstop = 2
+o.shiftwidth = 2
 
 vim.diagnostic.config {
   virtual_text = {
@@ -40,5 +44,3 @@ vim.diagnostic.config {
     prefix = "",
   },
 }
-
-vim.cmd [[ filetype plugin indent on ]]
